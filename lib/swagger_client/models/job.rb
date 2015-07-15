@@ -1,7 +1,7 @@
 module SwaggerClient
   # 
   class Job < BaseObject
-    attr_accessor :id, :token, :type, :status, :process, :test, :conversion, :input, :callback, :server, :created_at, :modified_at
+    attr_accessor :id, :token, :type, :status, :process, :conversion, :input, :callback, :server, :created_at, :modified_at
     # attribute mapping from ruby-style variable name to JSON key
     def self.attribute_map
       {
@@ -20,9 +20,6 @@ module SwaggerClient
         
         # Determine if the job must be processed as soon as it is ready.
         :'process' => :'process',
-        
-        # Determine if it is a test job.
-        :'test' => :'test',
         
         # Type of conversion or conversions to be carried out.
         :'conversion' => :'conversion',
@@ -53,7 +50,6 @@ module SwaggerClient
         :'type' => :'string',
         :'status' => :'Status',
         :'process' => :'boolean',
-        :'test' => :'boolean',
         :'conversion' => :'array[Conversion]',
         :'input' => :'array[InputFile]',
         :'callback' => :'string',
@@ -89,10 +85,6 @@ module SwaggerClient
       
       if attributes[:'process']
         @process = attributes[:'process']
-      end
-      
-      if attributes[:'test']
-        @test = attributes[:'test']
       end
       
       if attributes[:'conversion']

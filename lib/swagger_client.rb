@@ -14,7 +14,6 @@ require 'swagger_client/models/output_file'
 require 'swagger_client/models/conversion'
 require 'swagger_client/models/thread'
 require 'swagger_client/models/status'
-require 'swagger_client/models/link'
 require 'swagger_client/models/error'
 
 # APIs

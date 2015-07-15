@@ -2,7 +2,7 @@ require "uri"
 
 module SwaggerClient
   class InformationApi
-    basePath = "http://api2.online-convert.com"
+    basePath = "http://api2.online-convert.com/"
     # apiInvoker = APIInvoker
 
     # Get a list of the valid conversions.

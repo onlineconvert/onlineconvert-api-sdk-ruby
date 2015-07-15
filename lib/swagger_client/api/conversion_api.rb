@@ -2,15 +2,15 @@ require "uri"
 
 module SwaggerClient
   class ConversionApi
-    basePath = "http://api2.online-convert.com"
+    basePath = "http://api2.online-convert.com/"
     # apiInvoker = APIInvoker
 
     # Get list of conversions defined for the current job.
     # 
     # @param job_id ID of job that needs to be fetched
     # @param [Hash] opts the optional parameters
-    # @option opts [string] :token Token for authentication.
-    # @option opts [string] :key Api key for the user to filter.
+    # @option opts [string] :x_oc_token Token for authentication for the current job
+    # @option opts [string] :x_oc_api_key Api key for the user to filter.
     # @return [array[Conversion]]
     def self.jobs_job_id_conversions_get(job_id, opts = {})
       
@@ -34,8 +34,8 @@ module SwaggerClient
       # HTTP header 'Content-Type'
       _header_content_type = []
       header_params['Content-Type'] = Swagger::Request.select_header_content_type(_header_content_type)
-      header_params[:'token'] = opts[:'token'] if opts[:'token']
-      header_params[:'key'] = opts[:'key'] if opts[:'key']
+      header_params[:'X-Oc-Token'] = opts[:'x_oc_token'] if opts[:'x_oc_token']
+      header_params[:'X-Oc-Api-Key'] = opts[:'x_oc_api_key'] if opts[:'x_oc_api_key']
 
       # form parameters
       form_params = {}
@@ -54,8 +54,8 @@ module SwaggerClient
     # @param body information for the conversion.
     # @param job_id ID of job that needs to be fetched
     # @param [Hash] opts the optional parameters
-    # @option opts [string] :token Token for authentication.
-    # @option opts [string] :key Api key for the user to filter.
+    # @option opts [string] :x_oc_token Token for authentication for the current job
+    # @option opts [string] :x_oc_api_key Api key for the user to filter.
     # @return [Conversion]
     def self.jobs_job_id_conversions_post(body, job_id, opts = {})
       
@@ -82,8 +82,8 @@ module SwaggerClient
       # HTTP header 'Content-Type'
       _header_content_type = []
       header_params['Content-Type'] = Swagger::Request.select_header_content_type(_header_content_type)
-      header_params[:'token'] = opts[:'token'] if opts[:'token']
-      header_params[:'key'] = opts[:'key'] if opts[:'key']
+      header_params[:'X-Oc-Token'] = opts[:'x_oc_token'] if opts[:'x_oc_token']
+      header_params[:'X-Oc-Api-Key'] = opts[:'x_oc_api_key'] if opts[:'x_oc_api_key']
 
       # form parameters
       form_params = {}
@@ -102,8 +102,8 @@ module SwaggerClient
     # @param job_id ID of job that needs to be fetched
     # @param conversion_id Identifier for the job conversion.
     # @param [Hash] opts the optional parameters
-    # @option opts [string] :token Token for authentication.
-    # @option opts [string] :key Api key for the user to filter.
+    # @option opts [string] :x_oc_token Token for authentication for the current job
+    # @option opts [string] :x_oc_api_key Api key for the user to filter.
     # @return [Conversion]
     def self.jobs_job_id_conversions_conversion_id_get(job_id, conversion_id, opts = {})
       
@@ -130,8 +130,8 @@ module SwaggerClient
       # HTTP header 'Content-Type'
       _header_content_type = []
       header_params['Content-Type'] = Swagger::Request.select_header_content_type(_header_content_type)
-      header_params[:'token'] = opts[:'token'] if opts[:'token']
-      header_params[:'key'] = opts[:'key'] if opts[:'key']
+      header_params[:'X-Oc-Token'] = opts[:'x_oc_token'] if opts[:'x_oc_token']
+      header_params[:'X-Oc-Api-Key'] = opts[:'x_oc_api_key'] if opts[:'x_oc_api_key']
 
       # form parameters
       form_params = {}
@@ -150,8 +150,8 @@ module SwaggerClient
     # @param job_id ID of job that needs to be fetched
     # @param conversion_id Identifier for the job conversion.
     # @param [Hash] opts the optional parameters
-    # @option opts [string] :token Token for authentication.
-    # @option opts [string] :key Api key for the user to filter.
+    # @option opts [string] :x_oc_token Token for authentication for the current job
+    # @option opts [string] :x_oc_api_key Api key for the user to filter.
     # @return [Conversion]
     def self.jobs_job_id_conversions_conversion_id_delete(job_id, conversion_id, opts = {})
       
@@ -178,8 +178,8 @@ module SwaggerClient
       # HTTP header 'Content-Type'
       _header_content_type = []
       header_params['Content-Type'] = Swagger::Request.select_header_content_type(_header_content_type)
-      header_params[:'token'] = opts[:'token'] if opts[:'token']
-      header_params[:'key'] = opts[:'key'] if opts[:'key']
+      header_params[:'X-Oc-Token'] = opts[:'x_oc_token'] if opts[:'x_oc_token']
+      header_params[:'X-Oc-Api-Key'] = opts[:'x_oc_api_key'] if opts[:'x_oc_api_key']
 
       # form parameters
       form_params = {}

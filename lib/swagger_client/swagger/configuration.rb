@@ -7,8 +7,8 @@ module SwaggerClient
       def initialize
         @format = 'json'
         @scheme = 'http'
-        @host = 'api2.akokine.de'
-        @base_path = ''
+        @host = 'api2.online-convert.com'
+        @base_path = '/'
         @user_agent = "ruby-swagger-#{Swagger::VERSION}"
         @inject_format = false
         @force_ending_format = false
